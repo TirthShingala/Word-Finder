@@ -1,0 +1,23 @@
+{
+  "name": "Find Word",
+  "description": "find word in current page",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.who.int/health-topics/coronavirus#tab=tab_1"],
+      "js": ["script.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "script.js"
+  },
+  "icons": {
+    "128": "logo.png"
+  }
+}
